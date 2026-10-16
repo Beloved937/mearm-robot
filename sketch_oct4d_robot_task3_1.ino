@@ -1,7 +1,7 @@
-const int keyPin1;   //按键1 循环抓取
-const int keyPin2;   //按键2 录制
-const int keyPin3;   //按键3 播放
-const int keyPin4;   //按键4 回中
+const int keyPin1=2;   //按键1 循环抓取
+const int keyPin2=3;   //按键2 录制
+const int keyPin3=4;   //按键3 播放
+const int keyPin4=5;   //按键4 回中
 
 //按键状态保存，消抖
 int lastKey1 = HIGH;
@@ -10,6 +10,7 @@ int lastKey3 = HIGH;
 int lastKey4 = HIGH;
 
 void setup() {
+  Serial.begin(9600);
   pinMode(keyPin1, INPUT_PULLUP);
   pinMode(keyPin2, INPUT_PULLUP);
   pinMode(keyPin3, INPUT_PULLUP);
